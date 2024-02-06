@@ -3,36 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
-    <!-- You can add additional meta tags, stylesheets, or scripts in the head section -->
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Webpage</h1>
-    </header>
 
-    <nav>
-        <!-- Navigation links can be added here -->
-    </nav>
+    <form action="/register" method="post">
+        <h2>Registration Form</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>This is a paragraph about me.</p>
-        </section>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-        <section>
-            <h2>My Interests</h2>
-            <ul>
-                <li>Interest 1</li>
-                <li>Interest 2</li>
-                <li>Interest 3</li>
-            </ul>
-        </section>
-    </main>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
 
-    <footer>
-        <p>&copy; 2024 My Webpage. All rights reserved.</p>
-    </footer>
+        <button type="submit">Register</button>
+    </form>
+
 </body>
 </html>
